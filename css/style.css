@@ -868,7 +868,7 @@ body {
 }
 
 .sponsors__track {
-  width: calc(190px * 13);
+  width: calc(190px * 12);
   display: grid;
   grid-auto-flow: column;
   -webkit-column-gap: 2.66rem;
