@@ -1,0 +1,111 @@
+.footer {
+  padding: 6.66rem 0; 
+  background-color: $light-gray;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    width: 30%;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    &:last-child {
+      width: 50%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 1.33rem;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    @include text
+  }
+
+  &__social {
+    margin-bottom: 2rem;
+
+    &__link {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__copy {
+    color: $copy;
+    font-size: $font-s;
+    font-weight: 400;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 1.33rem;
+
+    color: $black;
+    font-size: $font-m;
+    font-weight: 500;
+  }
+
+  &__link {
+    @include text;
+    transition: all 0.2s ease;
+
+    &:not(:last-child) {
+      margin-bottom: 0.66rem;
+    }
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+@include l-tablet {
+  .footer {
+    padding: 3.33rem 0;
+  }
+}
+
+@include tablet {
+  .footer__inner {
+    flex-direction: column;
+  }
+
+  .footer__content {
+    width: 100%;
+
+    &:last-child {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@include sm-mobile {
+  .footer__content:last-child {
+    flex-direction: column;
+  }
+
+  .footer__block {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}

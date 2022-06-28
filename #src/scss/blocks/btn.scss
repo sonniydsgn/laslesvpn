@@ -1,0 +1,65 @@
+.btn {
+  padding: 0.86rem 3rem;
+
+  color: $red;
+  font-family: inherit;
+  font-size: 1.06rem;
+  font-weight: 500;
+
+  border: 2px solid $red;
+  border-radius: 50px;
+  background-color: $white;
+
+  transition: all 0.2s ease;
+  
+  &:hover {
+    color: $white;
+    background-color: $red;
+  }
+}
+
+.btn--large {
+  padding: 0.86rem 4rem;
+  &:hover {
+    box-shadow: 0px 20px 35px -15px rgba($red, 0.7);
+  }
+}
+
+.btn--red {
+  padding: 1.16rem 5.2rem;
+
+  color: $white;
+  background-color: $red;
+  font-weight: 600;
+
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0px 20px 35px -15px rgba($red, 0.7);
+  
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.btn--signin {
+  padding: 0;
+  color: $black;
+  border: 0;
+
+  &:hover {
+    color: $red;
+    background-color: $white;
+  }
+}
+
+.btn--signup {
+  margin-left: 2rem;
+}
+
+@include mobile {
+  .btn {
+    padding: 1.5rem;
+    width: 100%;
+  }
+}

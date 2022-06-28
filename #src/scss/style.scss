@@ -1,0 +1,41 @@
+/*	Reset	*/
+@import "vendor/reset";
+
+/*	Imports	*/
+@import "untils/vars";
+@import "untils/mixins";
+@import "untils/fonts";
+
+html {
+	font-size: 15px;
+}
+
+body {
+	margin: 0;
+	font-family: 'Rubik', sans-serif;
+	font-size: 1.06rem;
+	background-color: $white;
+	color: $black;
+}
+
+/* Vendors */
+@import "vendor/swiper-vars";
+@import "vendor/swiper";
+
+/*	Common	*/
+@import "blocks/sprite";
+@import "blocks/container";
+
+/*	Blocks	*/
+@import "blocks/btn";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/intro";
+@import "blocks/about";
+@import "blocks/features";
+@import "blocks/pricing";
+@import "blocks/location";
+@import "blocks/sponsors";
+@import "blocks/reviews";
+@import "blocks/subscribe";
+@import "blocks/footer";

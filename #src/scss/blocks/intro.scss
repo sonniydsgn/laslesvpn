@@ -1,0 +1,64 @@
+.intro { 
+  padding-top: 13.66rem;
+
+  &__inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin-bottom: 1.33rem;
+
+    color: $black;
+    font-size: $font-title;
+    font-weight: 500;
+  }
+
+  &__text {
+    margin-bottom: 3.33rem;
+    @include text
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    order: 1;
+  }
+}
+
+@include l-tablet {
+  .intro {
+    padding-top: 12rem;
+  }
+
+  .intro__title {
+    font-size: $font-xxl;
+  }
+}
+
+@include mobile {
+  .intro__inner {
+    row-gap: 3.33rem;
+    grid-template-columns: 1fr;
+  }
+
+  .intro__image {
+    width: 100%;
+    order: 0;
+  }
+}
+
+@include sm-mobile {
+  .intro__title {
+    font-size: $font-xl;
+  }
+}

@@ -1,0 +1,56 @@
+.sponsors {
+  overflow: hidden;
+  
+  &__list {
+    width: 100%;
+    position: relative;
+
+    &::before,
+    &::after {
+    @include white-gradient;
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+    }
+    
+    &::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__track {
+    width: calc(190px * 13);
+
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 2.66rem;
+
+    animation: scroll $carouselSpeed linear infinite;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 190px;
+    height: 61px;
+  }
+
+  &__item img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-230px * 5))}
+}

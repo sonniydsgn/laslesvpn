@@ -1,0 +1,122 @@
+.pricing {
+  padding: 6.66rem 0;
+  background-color: $light-gray;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    @include title
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+    @include text;
+    text-align: center;
+  }
+
+  &__list {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 0.8fr));
+    grid-gap: 3.33rem;
+    justify-content: center;
+  }
+
+  &__card {
+    padding: 5.33rem 4.66rem 3.33rem 4.66rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: $white;
+    border: 2px solid $border;
+    border-radius: 10px;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      border: 2px solid $red;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 2rem;
+  }
+
+  &__name {
+    margin-bottom: 2rem;
+
+    color: $black;
+    font-size: $font-m;
+    font-weight: 600;
+  }
+
+  &__item__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-bottom: 3.33rem;
+    padding: 0.2rem 0 0.2rem 2.13rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    color: $gray;
+    font-size: $font-xs;
+    font-weight: 400;
+
+    background-image: url(../images/icons/check-2.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+  &__select {
+    margin-top: auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__price {
+    margin-bottom: 1.33rem;
+
+    color: $black;
+    font-size: $font-xl;
+    font-weight: 600;
+
+    span {
+      color: $gray;
+      font-weight: 400;
+    }
+  }
+}
+
+@include l-tablet {
+  .pricing {
+    padding: 3.33rem 0;
+  }
+}
+
+@include sm-mobile {
+  .pricing__list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .pricing__card {
+    padding: 2.66rem 1rem 1.66rem 1rem;
+  }
+}
